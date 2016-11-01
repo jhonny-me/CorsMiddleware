@@ -10,8 +10,8 @@ import HTTP
 import JSON
 import Vapor
 
-public class CorsMiddleware: Middleware {
-	public func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
+class CorsMiddleware: Middleware {
+	func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
 		let response: Response
 		if request.isPreflight {
 			response = "".makeResponse()
@@ -24,8 +24,6 @@ public class CorsMiddleware: Middleware {
 		response.headers["Access-Control-Allow-Methods"] = "POST, GET, PUT, OPTIONS, DELETE, PATCH"
 		return response
 	}
-	
-	public init() {}
 }
 
 extension Request {

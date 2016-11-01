@@ -8,13 +8,13 @@ This is a middleware for [Vapor](https://vapor.codes/) framework to solving [COR
 #### Package (recommended)
 1. add `.Package(url: "https://github.com/jhonny-me/CorsMiddleware.git", majorVersion: 1, minor: 0)` to Package.swift => dependencies
 2. in your code `let drop = Droplet(availableMiddleware: ["cors" :CorsMiddleware()])`
-3. add `"cors"` to Config/middleware.json => server
+3. add `"cors"` to Config/droplet.json => middleware => server
 
 #### Manually
 1. download or clone the repo
 2. drop CorsMiddleware.swift to your `<Project Dir>/Sources/App/Middlewares` folder
 2. in your code `let drop = Droplet(availableMiddleware: ["cors" :CorsMiddleware()])`
-3. add `"cors"` to Config/middleware.json => server
+3. add `"cors"` to Config/droplet.json => middleware => server
 
 ## About
 I spent times to solve the CORS problem, and was frustrated when `Droplet(

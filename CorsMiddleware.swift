@@ -11,7 +11,7 @@ import JSON
 import Vapor
 
 public class CorsMiddleware: Middleware {
-	func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
+	public func respond(to request: Request, chainingTo chain: Responder) throws -> Response {
 		let response: Response
 		if request.isPreflight {
 			response = "".makeResponse()
